@@ -7,6 +7,8 @@ ssh-keyscan github.com > /root/.ssh/known_hosts
 echo "${INPUT_SUBTREE_DEPLOY_KEY}" >> /root/.ssh/subtree
 chmod 0600 /root/.ssh/subtree
 
+ssh-agent -s
+
 ssh-add /root/.ssh/subtree
 
 git config --global user.name "Deployment"
