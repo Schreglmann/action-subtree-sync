@@ -11,12 +11,9 @@ eval $(ssh-agent -s)
 
 ssh-add /root/.ssh/subtree
 
-git config --global user.name "Deployment"
-git config --global user.email "georgschreglmann@gmx.at"
-
 # Get subtree repository into split directory
-git clone git@github.com:schreglmann/testproject.git /tmp/split
+git clone git@github.com:"${INPUT_MAINREPO}".git /tmp/split
 
 cd /tmp/split
 
-git subtree push --prefix web git@github.com:Schreglmann/subtreeweb.git master
+git subtree push --prefix web git@github.com:"${INPUT_SUBTREEREPO}".git master
