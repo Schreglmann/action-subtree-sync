@@ -7,6 +7,9 @@ ssh-keyscan github.com > /root/.ssh/known_hosts
 echo "${INPUT_SUBTREE_DEPLOY_KEY}" >> /root/.ssh/subtree
 chmod 0600 /root/.ssh/subtree
 
+git config --global user.name "Deployment"
+git config --global user.email "georgschreglmann@gmx.at"
+
 # Get subtree repository into split directory
 git clone https://github.com/"${INPUT_SUBTREE}" /tmp/split
 
