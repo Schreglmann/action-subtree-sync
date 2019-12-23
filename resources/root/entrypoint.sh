@@ -10,16 +10,6 @@ chmod 0600 /root/.ssh/subtree
 # Get subtree repository into split directory
 git clone https://github.com/"${INPUT_SUBTREE}" /tmp/split --bare
 
-# Create the subtree split branch
-git subtree split --prefix="${INPUT_SPLIT_PREFIX}" --squash -b split
-# Push to the subtree directory
-git push /tmp/split split:master
-
 cd /tmp/split
-git push -u origin master
 
-# Tag the subtree repository
-git tag $(basename "${GITHUB_REF}")
-git push --tags
-
-# DUN
+git subtree push --prefix web https://github.com/Schreglmann/subtreeweb master
