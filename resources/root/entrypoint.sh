@@ -10,7 +10,7 @@ chmod 0600 /root/.ssh/subtree
 # Get subtree repository into split directory
 git clone subtree:"${INPUT_SUBTREE}" /tmp/split --bare
 
-echo ls
+echo $(ls)
 
 # Create the subtree split branch
 git subtree split --prefix="${INPUT_SPLIT_PREFIX}" --squash -b split
