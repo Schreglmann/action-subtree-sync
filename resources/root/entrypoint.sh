@@ -8,7 +8,7 @@ echo "${INPUT_SUBTREE_DEPLOY_KEY}" >> /root/.ssh/subtree
 chmod 0600 /root/.ssh/subtree
 
 # Get subtree repository into split directory
-git clone https://github.com/"${INPUT_SUBTREE}" /tmp/split --bare
+git clone https://github.com/"${INPUT_SUBTREE}" /tmp/split
 
 cd /tmp/split
 
