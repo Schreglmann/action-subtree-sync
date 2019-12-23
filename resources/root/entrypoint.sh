@@ -12,4 +12,6 @@ git clone https://github.com/"${INPUT_SUBTREE}" /tmp/split
 
 cd /tmp/split
 
+echo $(ls)
+
 git subtree push --prefix web https://github.com/Schreglmann/subtreeweb master
