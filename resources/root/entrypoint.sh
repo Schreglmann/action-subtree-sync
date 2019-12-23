@@ -11,10 +11,8 @@ git config --global user.name "Deployment"
 git config --global user.email "georgschreglmann@gmx.at"
 
 # Get subtree repository into split directory
-git clone https://github.com/"${INPUT_SUBTREE}" /tmp/split
+git clone https://github.com/schreglmann/testproject /tmp/split
 
 cd /tmp/split
-
-echo $(ls)
 
 git subtree push --prefix web https://github.com/Schreglmann/subtreeweb master
