@@ -1,6 +1,7 @@
 #!/bin/sh -l
 
 ssh-keyscan "${INPUT_DOKKU_REPO}" > /root/.ssh/known_hosts
+ssh-keyscan github.com > /root/.ssh/known_hosts
 
 echo "${INPUT_REPO_KEY}" >> /root/.ssh/repo_key
 chmod 0600 /root/.ssh/repo_key
