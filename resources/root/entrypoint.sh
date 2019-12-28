@@ -17,7 +17,7 @@ git clone git@github.com:"${INPUT_MAIN_REPO}".git /tmp/split
 
 
 
-ssh-keyscan -t rsa "${INPUT_DOKKU_REPO}" > /root/.ssh/known_hosts
+ssh-keyscan -t rsa "${INPUT_DOKKU_REPO_IP}" > /root/.ssh/known_hosts
 
 echo "${INPUT_DEPLOY_KEY}" > /root/.ssh/deploy_key
 chmod 0600 /root/.ssh/deploy_key
