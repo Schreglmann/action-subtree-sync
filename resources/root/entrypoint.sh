@@ -1,3 +1,5 @@
+#!/bin/sh -l
+
 ssh-keyscan github.com >> /root/.ssh/known_hosts
 ssh-keyscan -t rsa "${INPUT_DOKKU_REPO_IP}" >> /root/.ssh/known_hosts
 chmod 600 /root/.ssh/known_hosts
